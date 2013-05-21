@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+function getBread(){
+$("#previewMenu").html(window.localStorage.getItem("bread"));
+$("#kindMenu").html(window.localStorage.getItem("kind"));
+//$("#toppingMenu").html(window.localStorage.getItem("topping")).each();
+
+}
+
+
+
+function placeOrder(){	
+	window.location.href = "placeOrder.html";
+}
+
+
+</script>
+</head>
+
+<body onLoad="getBread()">
+<div class="boxed" align="center">
+               <h1 id="previewMenu"></h1>
+                <h1 id="kindMenu"></h1>
+                <h1 id="toppingMenu"></h1>
+               
+ <input type="submit" name="submit" value="Place the Order" onClick="placeOrder()"/>               
+                
+</div>
+</body>
+</html>

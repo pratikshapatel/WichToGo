@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Menu</title>
+<link href="CSS/layout.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.6.4.min.js"></script>
+<script>
+function setChoices(){
+	//grab the values from teh selections and create key/value pairs for each
+	var s1 = $('input[name=bread]:checked', '#menuForm').val();
+	window.localStorage.setItem("bread", s1);
+	// et cetera - for al radio groups and check boxes
+	// These are now in local storage and can be easily retrieved by your application in any view
+	console.log(window.localStorage.getItem("bread"));
+	
+	var s2 = $('input[name=kind]:checked', '#menuForm').val();
+	window.localStorage.setItem("kind", s2);
+	console.log(window.localStorage.getItem("kind"));
+/*	
+	var s3 = $('input[name=topping]:checked', '#menuForm').val();
+	window.localStorage.setItem("topping", s3);
+	console.log(window.localStorage.getItem("topping"));*/
+    
+	//$("input:checkbox:checked").each()
+	/*var s3 = $('input[name=topping]:checked', '#menuForm').val();
+	window.localStorage.setItem("topping", s3);
+	console.log(window.localStorage.getItem("topping"));*/
+	
+	/*$("input[type='checkbox']:checked").each( 
+    function() { 
+       // Your code goes here...
+    } 
+	);*/
+	
+		
+	
+	
+	window.location.href = "previewMenu.html";
+}
+</script>
+</head>
+
+<body>
+<!--<p align="center">  WichToGo</p>
+<div class="boxed" align="center">
+  MENU
+</div>-->
+<div id="mainMenu" align="center" style="background-color:#C1C9BA">
+<h1 align="center">  WichToGo</h1>
+<div class="boxed" align="center">
+  MENU
+</div>
+<div class="items" align="center" style="background-color:#C1C9BA">
+<FORM id="menuForm">
+	<!--<fieldset>
+		<legend>BREAD</legend>
+        <input type="radio" name="bread" value="Wheat" id="Wheat" />
+        <label for="Wheat">WHEAT</label><br />
+        <input type="radio" name="bread" value="White" id="White" />
+        <label for="White">WHITE</label><br />
+ 	</fieldset>
+    
+    <fieldset>
+		<legend>WHICH KIND</legend>
+        <input type="radio" name="kind" value="Veggie" id="Veggie" />
+        <label for="Veggie">VEGGIE</label><br />
+        <input type="radio" name="kind" value="Meat" id="Meat" />
+        <label for="Meat">MEAT</label><br />
+ 	</fieldset>-->
+    <h2>BREAD</h2> 
+    <input type="radio" name="bread" value="Wheat" id="Wheat" />
+    <label for="Wheat">WHEAT</label><br />
+    <input type="radio" name="bread" value="White" id="White" />
+    <label for="White">WHITE</label><br />
+    
+    <h2>WHICH KIND</h2>  
+    <input type="radio" name="kind" value="Veggie" id="Veggie" />
+    <label for="Veggie">VEGGIE</label><br />
+    <input type="radio" name="kind" value="Meat" id="Meat" />
+    <label for="Meat">MEAT</label><br /> 
+    <h2>TOPPINGS</h2>        
+    <input type="checkbox" name="topping" value="Lettuce" id="Lettuce" />
+    <label for="Lettuce">LETTUCE</label><br />
+    <input type="checkbox" name="topping" value="Onion" id="Onion" />
+    <label for="Onion">ONION</label><br />         
+    
+    <input type="checkbox" name="topping" value="Tomato" id="Tomato" />
+    <label for="Tomato">TOMATO</label><br />     
+    <input type="checkbox" name="topping" value="Chicken" id="Chicken" />
+    <label for="Chicken">CHICKEN</label><br />     
+    <input type="checkbox" name="topping" value="Turkey" id="Turkey" />
+    <label for="Turkey">TURKEY</label><br />         
+    
+</FORM>
+
+<input type="button" id="proceed" onClick="setChoices()" value="PROCEED" />
+
+
+</div>
+<h4>WichToGo.com</h4>
+    <img src="images/facebook.jpg" width="32" height="32" />
+    <img src="images/pinterest.jpg" width="40" height="40" />
+    <img src="images/instagram.jpg" width="32" height="32" />
+</div>
+</body>
+</html>

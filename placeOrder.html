@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script type="text/javascript" language="javascript">
+function notEmpty(elem, helperMsg){
+	if(elem.value.length == 0){
+		alert(helperMsg);
+		elem.focus(); // set the focus to this input
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+
+<body>
+
+<div class="items" align="center" style="background-color:#C1C9BA">
+<FORM id="orderForm">
+First Name: <input type="text" name="name" autofocus required><br />
+Last Name: <input type="text" name="name" required><br />
+Phone No: <input type="text" name="name"  placeholder="Ex. 999-999-9999"pattern='\d{3}[\-]\d{3}[\-]\d{4}' required><br />
+<input type="submit" name="send" id="send" value="Submit">
+
+    
+    
+</FORM>
+
+
+
+</body>
+</html>
