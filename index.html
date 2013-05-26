@@ -22,7 +22,7 @@
 
 <!-- MAIN PAGE -->
 <div data-role="page" id="home" data-theme="c"> 
-	<div data-role="header">
+	<div data-role="header" data-backbtn="True">
 		<h1>WichToGo Sandwiches</h1>
     </div>
     <div data-role="content" align="center" data-theme="e">
@@ -34,7 +34,7 @@
        	<a href="https://www.facebook.com/"><img src="images/facebook.jpg"  width="32" height="32" alt="FaceBook" /></a>
         <a href="http://pinterest.com/"><img src="images/pinterest.jpg" width="32" height="32" alt="PInterest" /></a>
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" align="center" data-position="fixed">
 		<h3>WichToGo.com</h3>      	
     </div>
 </div>
@@ -44,7 +44,7 @@
 
 <!-- LOCATION PAGE -->
 <div data-role="page" id="location" data-theme="c"> 
-	<div data-role="header">
+	<div data-role="header"  data-backbtn="True">
 		<h1>WichToGo Sandwiches</h1>
     </div>
     <div data-role="content" align="center" data-theme="e">
@@ -53,11 +53,12 @@
             <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
                 <div data-role="fieldcontain">
                     <label for="from">From</label> 
-                    <input type="text" id="from" value="Longmont, Colorado"/>
+                   <!-- <input type="text" id="from" value="Longmont, Colorado"/> -->
+				   <input type="text" id="from" required placeholder="Start Address"/>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="to">To</label> 
-                    <input type="text" id="to" value="Denver, Colorado"/>
+                    <input type="text" id="to" value="2199 S University Blvd  Denver, CO 80208"/>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="mode" class="select">Transportation method:</label>
@@ -73,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" align="center" data-position="fixed">
 		<h3>WichToGo.com</h3>      	
     </div>
 </div>
@@ -82,113 +83,106 @@
 
 <!-- MENU PAGE -->
 <div data-role="page" id="menu" data-theme="c"> 
-	<div data-role="header">
+	<div data-role="header"  data-backbtn="True">
 		<h1>WichToGo Sandwiches</h1>
     </div>
     <div data-role="content" align="center" data-theme="e">
         <div class="items" align="center" style="background-color:#C1C9BA">
         <FORM id="menuForm">
-            <!--<fieldset>
-                <legend>BREAD</legend>
-                <input type="radio" name="bread" value="Wheat" id="Wheat" />
-                <label for="Wheat">WHEAT</label><br />
-                <input type="radio" name="bread" value="White" id="White" />
-                <label for="White">WHITE</label><br />
-            </fieldset>
-            
-            <fieldset>
-                <legend>WHICH KIND</legend>
-                <input type="radio" name="kind" value="Veggie" id="Veggie" />
-                <label for="Veggie">VEGGIE</label><br />
-                <input type="radio" name="kind" value="Meat" id="Meat" />
-                <label for="Meat">MEAT</label><br />
-            </fieldset>-->
-            <h2>BREAD</h2> 
+		<h2>BREAD</h2> 
             <input type="radio" name="bread" value="Wheat" id="Wheat" />
             <label for="Wheat">WHEAT</label><br />
             <input type="radio" name="bread" value="White" id="White" />
             <label for="White">WHITE</label><br />
             
-            <h2>WHICH KIND</h2>  
+        <h2>WHICH KIND</h2>  
             <input type="radio" name="kind" value="Veggie" id="Veggie" />
             <label for="Veggie">VEGGIE</label><br />
             <input type="radio" name="kind" value="Meat" id="Meat" />
             <label for="Meat">MEAT</label><br /> 
-            <h2>TOPPINGS</h2>        
+       <h2>TOPPINGS</h2>        
             <input type="checkbox" name="topping" value="Lettuce" id="Lettuce" />
             <label for="Lettuce">LETTUCE</label><br />
             <input type="checkbox" name="topping" value="Onion" id="Onion" />
-            <label for="Onion">ONION</label><br />         
-            
+            <label for="Onion">ONION</label><br />      
             <input type="checkbox" name="topping" value="Tomato" id="Tomato" />
             <label for="Tomato">TOMATO</label><br />     
             <input type="checkbox" name="topping" value="Chicken" id="Chicken" />
             <label for="Chicken">CHICKEN</label><br />     
             <input type="checkbox" name="topping" value="Turkey" id="Turkey" />
-            <label for="Turkey">TURKEY</label><br />         
-            
+            <label for="Turkey">TURKEY</label><br />       
         </FORM>
         </div>
         <input type="button" id="proceed" onClick="setChoices()" value="PROCEED" />
+		<a href="https://www.facebook.com/"><img src="images/facebook.jpg"  width="32" height="32" alt="FaceBook" /></a>
+        <a href="http://pinterest.com/"><img src="images/pinterest.jpg" width="32" height="32" alt="PInterest" /></a>
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" align="center" data-position="fixed">
 		<h3>WichToGo.com</h3>      	
     </div>
 </div>
-
-
-
 
 <!-- PREVIEWMENU PAGE -->
 <div data-role="page" id="previewMenu" data-theme="c"> 
-	<div data-role="header">
+	<div data-role="header"  data-backbtn="True">
 		<h1>WichToGo Sandwiches</h1>
     </div>
     <div data-role="content" align="center" data-theme="e">
-        <div class="boxed" align="center" style="color:Black;fontSize:small;Height:100%;Width:100%">
-            <h1 id="previewMenu"></h1>
-            <h1 id="kindMenu"></h1>
-            <h1 id="toppingMenu"></h1>
-            <input type="submit" name="submit" value="Place the Order" onClick="placeOrder()"/>               
-        </div>
+		<h1 id="previewMenu"></h1>
+        <h1 id="kindMenu"></h1>
+        <h1 id="toppingMenu"></h1>
+		<input type="submit" name="submit" value="Place the Order" onClick="placeOrder()"/>
+		<a href="https://www.facebook.com/"><img src="images/facebook.jpg"  width="32" height="32" alt="FaceBook" /></a>
+        <a href="http://pinterest.com/"><img src="images/pinterest.jpg" width="32" height="32" alt="PInterest" /></a>		
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" align="center" data-position="fixed">
 		<h3>WichToGo.com</h3>      	
     </div>
 </div>
 
-
-
 <!-- PLACEORDER PAGE -->
 <div data-role="page" id="placeOrder" data-theme="c"> 
-	<div data-role="header">
+	<div data-role="header"  data-backbtn="True">
 		<h1>WichToGo Sandwiches</h1>
     </div>
     <div data-role="content" align="center" data-theme="e">
         <div class="items" align="center" style="background-color:#C1C9BA">
             <FORM id="orderForm">
-                First Name: <input type="text" name="name" autofocus="required"><br />
-                Last Name: <input type="text" name="name" required><br />
-                Phone No: <input type="text" name="name"  placeholder="Ex. 999-999-9999"pattern='\d{3}[\-]\d{3}[\-]\d{4}' required><br />
+                First Name: <input type="text" id="fname" name="name" autofocus="required"><br />
+                Last Name: <input type="text" id="lname" name="name" required><br />
+                Phone No: <input type="text" id="phno" name="name"  placeholder="Ex. 999-999-9999"pattern='\d{3}[\-]\d{3}[\-]\d{4}' required><br />
                 <!--<video autoplay id="vid" style="display:none;"></video>
-                <canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas><br />
-               <br />-->
-               <br />
-                 <button onclick="snapshot()">Take Picture</button><br />
-                 <input type="submit" id="submitBtn" name="send" id="send" value="Submit"><br />
+                <canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas><br>
+                <button onclick="snapshot()">Take Picture</button><br />-->
+                <input type="submit" id="submitBtn" name="send" id="send" value="Submit">
             </FORM>
         </div>
+		
+		<div id="results" ></div>
+		<a href="https://www.facebook.com/"><img src="images/facebook.jpg"  width="32" height="32" alt="FaceBook" /></a>
+		<a href="http://pinterest.com/"><img src="images/pinterest.jpg" width="32" height="32" alt="PInterest" /></a>
     </div>
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" align="center" data-position="fixed">
 		<h3>WichToGo.com</h3>      	
     </div>
 </div>
 
-
-
-    
-    
-    
+<!-- THANK YOU PAGE -->
+<div data-role="page" id="thanku" data-theme="c"> 
+	<div data-role="header"  data-backbtn="True">
+		<h1>WichToGo Sandwiches</h1>
+    </div>
+    <div data-role="content" align="center" data-theme="e">
+		<h1>Thank  you for ordering sandwich</h1>
+       
+		
+		<a href="https://www.facebook.com/"><img src="images/facebook.jpg"  width="32" height="32" alt="FaceBook" /></a>
+        <a href="http://pinterest.com/"><img src="images/pinterest.jpg" width="32" height="32" alt="PInterest" /></a>		
+    </div>
+    <div data-role="footer" align="center" data-position="fixed">
+		<h3>WichToGo.com</h3>      	
+    </div>
+</div>
     
 <script type="text/javascript">
 	
@@ -212,7 +206,9 @@
 		getBread();
 	});
 	
-	
+	$('#thanku').on('pageshow', function(event, ui){
+		loadRecord(); 
+	});
 	
 	
     // Mapping
@@ -274,10 +270,7 @@
 
         }
     }
-	
-	
-	
-	
+		
 	// Menu
 	function setChoices(){
 		//grab the values from teh selections and create key/value pairs for each
@@ -293,28 +286,8 @@
 		window.localStorage.setItem("bread", s1);
 		var s2 = $('input[name=kind]:checked', '#menuForm').val();
 		window.localStorage.setItem("kind", s2);
-		//console.log(window.localStorage.getItem("kind"));
-	/*	
-		var s3 = $('input[name=topping]:checked', '#menuForm').val();
-		window.localStorage.setItem("topping", s3);
-		console.log(window.localStorage.getItem("topping"));*/
-		
-		//$("input:checkbox:checked").each()
-		/*var s3 = $('input[name=topping]:checked', '#menuForm').val();
-		window.localStorage.setItem("topping", s3);
-		console.log(window.localStorage.getItem("topping"));*/
-		
-		/*$("input[type='checkbox']:checked").each( 
-		function() { 
-		   // Your code goes here...
-		} 
-		);
-	
-		window.location.href = "previewMenu.html";*/
-		
-		
-		$.mobile.changePage("#previewMenu");
-		
+		//console.log(window.localStorage.getItem("kind"));		
+		$.mobile.changePage("#previewMenu");		
 	}
 	
 	function getBread(){
@@ -328,31 +301,101 @@
 		//window.location.href = "Test.html";
 		$.mobile.changePage("#placeOrder");
 	}
-	
-	
-	
-	
-	// Stuff from placeorder page...
-	
-	/*$(document).ready(function() {
-        $("#submitBtn").click(function(){
-			var db = openDatabase("userInfo","1.0","User Information","200000");
-			
-	alert("database has been created");
-			});
-    });*/
-	
-	
-	/*function notEmpty(elem, helperMsg){
-	if(elem.value.length == 0){
-		alert(helperMsg);
-		elem.focus(); // set the focus to this input
-		return false;
-	}
-	return true;
-}*/
 
-    var video = document.querySelector("#vid");
+var createStatement = "CREATE TABLE IF NOT EXISTS userinfo (id INTEGER PRIMARY KEY AUTOINCREMENT, fname TEXT,lname TEXT, phno TEXT)"; 
+var selectAllStatement = "SELECT * FROM userinfo"; 
+var insertStatement = "INSERT INTO userinfo(fname,lname,phno) VALUES (?, ?, ?)";
+var db = openDatabase("Customer", "1.0", "Customer", 200000);  // Open SQLite Database 
+var dataset; 
+var DataType;	
+
+$(document).on("pageinit", "#placeOrder", function() {
+        initDatabase();
+    });
+
+	function initDatabase()  // Function Call When Page is ready. 
+{ 
+    try { 
+        if (!window.openDatabase)  // Check browser is supported SQLite or not. 
+        { 
+            alert('Databases are not supported in this browser.'); 
+        } 
+        else { 
+            createTable();  // If supported then call Function for create table in SQLite 
+        } 
+    }
+     catch (e) { 
+        if (e == 2) { 
+            // Version number mismatch.  
+            console.log("Invalid database version."); 
+        } else { 
+            console.log("Unknown error " + e + "."); 
+        } 
+        return; 
+    } 
+}
+
+function createTable()  // Function for Create Table in SQLite. 
+{ 
+    db.transaction(function (tx) { tx.executeSql(createStatement, [], showRecords, onError); }); 
+}
+
+function insertRecord() // Get value from Input and insert record . Function Call when Save/Submit Button Click.. 
+{ 
+        var fnametemp = $('input:text[id=fname]','#orderForm').val();
+		var lnametemp = $('input:text[id=lname]','#orderForm').val();
+		var phnotemp = $('input:text[id=phno]','#orderForm').val(); 
+        var useremailtemp = $('input:text[id=useremail]').val();
+        db.transaction(function (tx) { tx.executeSql(insertStatement, [fnametemp, lnametemp, phnotemp], loadResult, onError); }); 
+		$.mobile.changePage("#thanku");
+}
+
+function loadRecord(i) // Function for display records which are retrived from database. 
+{ 
+    var item = dataset.item(i);
+	$("#fname").val((item['fname']).toString());
+    $("#lname").val((item['lname']).toString()); 
+    $("#phno").val((item['phno']).toString()); 
+    $("#id").val((item['id']).toString()); 
+}
+
+function loadResult() //Function for Load... 
+{
+    showRecords();
+
+}
+
+function onError(tx, error) // Function for Hendeling Error... 
+{ 
+    alert(error.message); 
+}
+ 
+function showRecords() // Function For Retrive data from Database Display records as list 
+{ 
+    $("#dbresults").html('') 
+    db.transaction(function (tx) { 
+        tx.executeSql(selectAllStatement, [], function (tx, result) { 
+            dataset = result.rows; 
+            for (var i = 0, item = null; i < dataset.length; i++) { 
+                item = dataset.item(i); 
+                var showres = '<li>' + item['fname'] + ' , ' + item['lname'] + ' , ' + item['phno'] ; 
+                $("#dbresults").append(showres); 
+				
+            } 
+        }); 
+    }); 
+}
+
+ $(document).ready(function () // Call function when page is ready for load.. 
+{ 
+   // $("body").fadeIn(2000); // Fede In Effect when Page Load.. 
+    initDatabase(); 
+    $("#submitBtn").click(insertRecord);  // Register Event Listener when button click.  
+		
+});
+
+
+	/*var video = document.querySelector("#vid");
     var canvas = document.querySelector('#canvas');
     var ctx = canvas.getContext('2d');
     var localMediaStream = null;
@@ -362,7 +405,6 @@
     };
 
     function snapshot() {
-     
         if (localMediaStream) {
             ctx.drawImage(video, 0, 0);
         }
@@ -374,7 +416,7 @@
         video.src = window.URL.createObjectURL(stream);
         localMediaStream = stream;
     }, onCameraFail);
-
+*/
 
 </script>
 
