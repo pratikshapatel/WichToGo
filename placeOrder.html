@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="cordova-2.6.0.js"></script>
+<script type="text/javascript" src="xui-core-1.0.0.min.js"></script>
+<script type="text/javascript">
+
+
+</script>
+<script>
+	/*$(document).ready(function() {
+        $("#submitBtn").click(function(){
+			var db = openDatabase("userInfo","1.0","User Information","200000");
+			
+	alert("database has been created");
+			});
+    });*/
+</script>
+
+<script type="text/javascript" language="javascript">
+/*function notEmpty(elem, helperMsg){
+	if(elem.value.length == 0){
+		alert(helperMsg);
+		elem.focus(); // set the focus to this input
+		return false;
+	}
+	return true;
+}*/
+
+	/*var video = document.querySelector("#vid");
+    var canvas = document.querySelector('#canvas');
+    var ctx = canvas.getContext('2d');
+    var localMediaStream = null;
+
+    var onCameraFail = function (e) {
+        console.log('Camera did not work.', e);
+    };
+
+    function snapshot() {
+        if (localMediaStream) {
+            ctx.drawImage(video, 0, 0);
+        }
+    }
+
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    window.URL = window.URL || window.webkitURL;
+    navigator.getUserMedia({video:true}, function (stream) {
+        video.src = window.URL.createObjectURL(stream);
+        localMediaStream = stream;
+    }, onCameraFail);
+*/
+</script>
+</head>
+
+<body>
+
+<div class="items" align="center" style="background-color:#C1C9BA">
+<FORM id="orderForm">
+First Name: <input type="text" name="name" autofocus required><br />
+Last Name: <input type="text" name="name" required><br />
+Phone No: <input type="text" name="name"  placeholder="Ex. 999-999-9999"pattern='\d{3}[\-]\d{3}[\-]\d{4}' required><br />
+
+
+<!--<video autoplay id="vid" style="display:none;"></video>
+<canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas><br>
+<button onclick="snapshot()">Take Picture</button><br />-->
+
+<input type="submit" id="submitBtn" name="send" id="send" value="Submit">
+
+    
+    
+</FORM>
+
+
+
+</body>
+</html>
